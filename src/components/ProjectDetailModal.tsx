@@ -186,7 +186,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
             {hasDemoAccounts && (
               <section>
                 <h3 className="mb-3 text-sm font-semibold text-slate-900">Akun Demo</h3>
-                <div className="overflow-x-auto rounded-lg border border-zinc-200">
+                <div className="overflow-x-auto rounded-lg border border-zinc-200" data-scroll-x="allowed">
                   <table className="w-full min-w-[280px] text-sm">
                     <thead>
                       <tr className="border-b border-zinc-200 bg-zinc-50 text-left">

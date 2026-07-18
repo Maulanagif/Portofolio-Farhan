@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
@@ -23,22 +23,29 @@ export const metadata: Metadata = {
   keywords: ["portfolio", "developer", "next.js", "react", "frontend"],
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="id" className="overflow-x-hidden">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
         <SectionTransitionProvider>
-          <Navbar />
-          <main>
-            <PageTransition>{children}</PageTransition>
-          </main>
-          <Footer />
+          <div id="site-root" className="overflow-x-hidden w-full max-w-full">
+            <Navbar />
+            <main className="overflow-x-hidden w-full max-w-full">
+              <PageTransition>{children}</PageTransition>
+            </main>
+            <Footer />
+          </div>
         </SectionTransitionProvider>
       </body>
     </html>

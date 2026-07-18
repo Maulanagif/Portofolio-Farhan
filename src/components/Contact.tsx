@@ -67,7 +67,7 @@ function ContactCard({
         <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-sky-600">
           {label}
         </p>
-        <p className="mt-2 text-sm font-medium leading-snug text-slate-900 transition-colors duration-300 group-hover:text-sky-800">
+        <p className="mt-2 break-words text-sm font-medium leading-snug text-slate-900 transition-colors duration-300 group-hover:text-sky-800">
           {display}
         </p>
       </div>
@@ -94,7 +94,7 @@ export function Contact() {
           />
         </Reveal>
 
-        <div className="grid gap-5 lg:grid-cols-12 lg:items-stretch">
+        <div className="grid min-w-0 gap-5 lg:grid-cols-12 lg:items-stretch">
           <Reveal variant="slide-left" delay={100} className="lg:col-span-4">
             <div className="flex h-full flex-col justify-between rounded-2xl bg-gradient-to-br from-sky-600 via-sky-600 to-blue-700 p-6 shadow-lg md:p-8">
               <div>

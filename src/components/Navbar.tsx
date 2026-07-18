@@ -45,7 +45,7 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full max-w-full overflow-x-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
         scrolled
           ? "bg-white/95 backdrop-blur-sm border-b py-3 shadow-sm shadow-sky-100 [border-color:var(--page-border-soft)]"
           : "py-5 bg-transparent"
