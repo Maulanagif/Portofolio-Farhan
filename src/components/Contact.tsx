@@ -34,6 +34,13 @@ const contactLinks = [
     external: true,
   },
   {
+    label: "GitHub",
+    href: siteConfig.github,
+    display: siteConfig.githubHandle,
+    type: "github" as const,
+    external: true,
+  },
+  {
     label: "Lokasi",
     href: siteConfig.locationUrl,
     display: siteConfig.location,
@@ -124,12 +131,7 @@ export function Contact() {
 
           <div className="grid gap-4 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-2 lg:content-start">
             {contactLinks.map((item, index) => (
-              <Reveal
-                key={item.label}
-                variant="fade-up"
-                delay={140 + index * 70}
-                className={item.label === "Lokasi" ? "sm:col-span-2 lg:col-span-2" : ""}
-              >
+              <Reveal key={item.label} variant="fade-up" delay={140 + index * 70}>
                 <ContactCard {...item} />
               </Reveal>
             ))}

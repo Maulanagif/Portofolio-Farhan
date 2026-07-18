@@ -1,10 +1,17 @@
-type SocialType = "email" | "linkedin" | "whatsapp" | "instagram" | "location";
+type SocialType =
+  | "email"
+  | "linkedin"
+  | "whatsapp"
+  | "instagram"
+  | "github"
+  | "location";
 
 const ICONS: Record<SocialType, string> = {
   email: "/Logo_Email.png",
   linkedin: "/Logo_linkedin.png",
   whatsapp: "/Logo_Whatsapp.png",
   instagram: "/Logo_Instagram.png",
+  github: "/github_logo_icon_229278.webp",
   location: "/Lokasi.png",
 };
 

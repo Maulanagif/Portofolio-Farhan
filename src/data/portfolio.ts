@@ -9,6 +9,8 @@ export const siteConfig = {
   whatsappNumber: "+62 822-8778-6941",
   instagram: "https://www.instagram.com/farh.anm01?igsh=MXNwNHBkZTcyODJ1bA==",
   instagramHandle: "@FARH.ANM01",
+  github: "https://github.com/Maulanagif",
+  githubHandle: "Maulanagif",
   location: "Jakarta Selatan, Indonesia",
   locationUrl:
     "https://www.google.com/maps/search/?api=1&query=Jakarta+Selatan,+Indonesia",
