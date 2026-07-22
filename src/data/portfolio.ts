@@ -60,6 +60,7 @@ export const skillGroups = [
     items: [
       "Visual Studio Code",
       "Cursor",
+      "Antigravity",
       "XAMPP",
       "Microsoft Office",
       "Wireshark",

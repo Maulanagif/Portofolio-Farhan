@@ -17,6 +17,7 @@ const ICON_PATHS: Record<string, string> = {
   Firebase: "/logo_Firebase.png",
   "Visual Studio Code": "/skills/visual-studio-code.webp",
   Cursor: "/Logo_Cursor.png",
+  Antigravity: "/Google-Antigravity-Icon-Full-Color.png",
   XAMPP: "/skills/xampp.png",
   "Microsoft Office": "/Logo_MicrosoftOffice.png",
   Wireshark: "/Logo_Wireshark.png",

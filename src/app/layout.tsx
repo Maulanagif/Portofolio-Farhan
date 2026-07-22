@@ -34,14 +34,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className="overflow-x-hidden">
+    <html lang="id" className="overflow-x-clip">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-clip`}
       >
         <SectionTransitionProvider>
-          <div id="site-root" className="overflow-x-hidden w-full max-w-full">
+          <div id="site-root" className="overflow-x-clip w-full max-w-full">
             <Navbar />
-            <main className="overflow-x-hidden w-full max-w-full">
+            <main className="overflow-x-clip w-full max-w-full">
               <PageTransition>{children}</PageTransition>
             </main>
             <Footer />

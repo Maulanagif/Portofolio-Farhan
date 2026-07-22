@@ -13,13 +13,6 @@ const contactLinks = [
     external: false,
   },
   {
-    label: "WhatsApp",
-    href: siteConfig.whatsapp,
-    display: siteConfig.whatsappNumber,
-    type: "whatsapp" as const,
-    external: true,
-  },
-  {
     label: "LinkedIn",
     href: siteConfig.linkedin,
     display: siteConfig.linkedinHandle,
@@ -60,14 +53,9 @@ function ContactCard({
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border-2 border-zinc-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-md"
+      className="group flex h-full flex-col justify-between rounded-2xl border-2 border-zinc-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-md"
     >
-      <span
-        className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-sky-100/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        aria-hidden="true"
-      />
-
-      <div className="relative">
+      <div>
         <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-sky-50 p-2.5 ring-1 ring-sky-100 transition-colors duration-300 group-hover:bg-white group-hover:ring-sky-200">
           <SocialIcon type={type} className="h-full w-full" />
         </div>
@@ -79,7 +67,7 @@ function ContactCard({
         </p>
       </div>
 
-      <div className="relative mt-5 flex items-center gap-1 text-xs font-medium text-zinc-400 transition-colors duration-300 group-hover:text-sky-600">
+      <div className="mt-5 flex items-center gap-1 text-xs font-medium text-zinc-400 transition-colors duration-300 group-hover:text-sky-600">
         <span>Buka</span>
         <ArrowUpRight
           size={14}
@@ -118,13 +106,6 @@ export function Contact() {
                   Saya terbuka untuk peluang kerja, kolaborasi proyek, dan diskusi seputar
                   teknologi informasi.
                 </p>
-              </div>
-
-              <div className="mt-8 rounded-xl border border-white/20 bg-white/10 px-4 py-3 backdrop-blur-sm">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-sky-100">
-                  Respons cepat via
-                </p>
-                <p className="mt-1 text-sm font-medium text-white">WhatsApp & Email</p>
               </div>
             </div>
           </Reveal>

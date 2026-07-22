@@ -24,7 +24,7 @@
 
 html {
   scroll-behavior: auto;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
 }
@@ -53,7 +53,7 @@ html {
 
 section[id] {
   scroll-margin-top: 5.5rem;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
 }
@@ -66,7 +66,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
   overscroll-behavior: none;
@@ -84,7 +84,7 @@ svg {
 }
 
 main {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
 }
@@ -147,7 +147,7 @@ main {
 
   .reveal {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
     transition:
       opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
       transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
@@ -235,7 +235,7 @@ main {
 
   .page-transition-root {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
   }
 
@@ -275,6 +275,11 @@ main {
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
+  }
+
+  .section-transition-panel,
+  .section-transition-content {
+    pointer-events: none;
   }
 
   .section-transition-active {
