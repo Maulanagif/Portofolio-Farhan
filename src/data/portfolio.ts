@@ -43,6 +43,7 @@ export const skillGroups = [
       "JavaScript",
       "TypeScript",
       "React Native",
+      "Expo",
       "Next.js",
       "Tailwind CSS",
     ],
@@ -85,12 +86,22 @@ export type DemoAccount = {
   password: string;
 };
 
+export type ProjectDownload = {
+  url: string;
+  label?: string;
+  barcodeImage?: string;
+};
+
 export type ProjectDetail = {
   fullDescription: string;
   images: ProjectImage[];
   technologies: string[];
   features?: string[];
   demoAccounts?: DemoAccount[];
+  download?: {
+    android?: ProjectDownload;
+    ios?: ProjectDownload;
+  };
 };
 
 export type Project = {
@@ -159,6 +170,45 @@ export const projects: Project[] = [
         "Prototype interaktif alur antar halaman",
         "Desain responsif sebagai acuan pengembangan website",
       ],
+    },
+  },
+  {
+    id: 3,
+    title: "FM-Finance",
+    subtitle: "Aplikasi Mobile · Keuangan Pribadi",
+    description:
+      "Aplikasi mobile untuk mengelola keuangan pribadi — mencatat pemasukan dan pengeluaran, memantau saldo, serta mengatur anggaran harian dengan antarmuka yang mudah digunakan.",
+    tags: ["Expo", "React Native", "TypeScript", "Firebase"],
+    detail: {
+      fullDescription:
+        "FM-Finance adalah aplikasi mobile keuangan pribadi yang dikembangkan menggunakan Expo, React Native, dan TypeScript dengan Firebase sebagai backend. Aplikasi ini membantu pengguna mencatat transaksi keuangan, memantau arus kas, dan mengelola anggaran secara praktis dari perangkat mobile.",
+      images: [
+        { src: "/m1.jpeg", alt: "FM-Finance — tampilan beranda aplikasi" },
+        { src: "/m2.jpeg", alt: "FM-Finance — ringkasan keuangan" },
+        { src: "/m3.jpeg", alt: "FM-Finance — daftar transaksi" },
+        { src: "/m4.jpeg", alt: "FM-Finance — tambah transaksi" },
+        { src: "/m5.jpeg", alt: "FM-Finance — kategori pengeluaran" },
+        { src: "/m6.jpeg", alt: "FM-Finance — profil pengguna" },
+      ],
+      technologies: ["Expo", "React Native", "TypeScript", "Firebase"],
+      features: [
+        "Pencatatan pemasukan dan pengeluaran harian",
+        "Ringkasan saldo dan arus kas",
+        "Kategori transaksi yang dapat dikustomisasi",
+        "Autentikasi pengguna dengan Firebase",
+        "Antarmuka mobile yang responsif dan mudah digunakan",
+      ],
+      download: {
+        android: {
+          url: "https://drive.google.com/drive/folders/1dkPf-9poNucYEhcom0Q6syVw8k3WQhiJ?usp=drive_link",
+          label: "Unduh APK Android",
+          barcodeImage: "/barcode.jpeg",
+        },
+        ios: {
+          url: "https://fm-finance-rho.vercel.app",
+          label: "Buka PWA di iPhone",
+        },
+      },
     },
   },
 ];
