@@ -43,7 +43,6 @@ export const skillGroups = [
       "JavaScript",
       "TypeScript",
       "React Native",
-      "Expo",
       "Next.js",
       "Tailwind CSS",
     ],
@@ -61,6 +60,7 @@ export const skillGroups = [
     items: [
       "Visual Studio Code",
       "Cursor",
+      "Expo",
       "Antigravity",
       "XAMPP",
       "Microsoft Office",
@@ -177,11 +177,11 @@ export const projects: Project[] = [
     title: "FM-Finance",
     subtitle: "Aplikasi Mobile · Keuangan Pribadi",
     description:
-      "Aplikasi mobile untuk mengelola keuangan pribadi — mencatat pemasukan dan pengeluaran, memantau saldo, serta mengatur anggaran harian dengan antarmuka yang mudah digunakan.",
+      "Aplikasi mobile untuk mengelola keuangan pribadi — mencatat pemasukan dan pengeluaran, memantau saldo, serta mengatur anggaran bulanan per kategori pengeluaran dengan UI yang mudah digunakan.",
     tags: ["Expo", "React Native", "TypeScript", "Firebase"],
     detail: {
       fullDescription:
-        "FM-Finance adalah aplikasi mobile keuangan pribadi yang dikembangkan menggunakan Expo, React Native, dan TypeScript dengan Firebase sebagai backend. Aplikasi ini membantu pengguna mencatat transaksi keuangan, memantau arus kas, dan mengelola anggaran secara praktis dari perangkat mobile.",
+        "FM-Finance adalah aplikasi mobile keuangan pribadi yang dikembangkan menggunakan Expo, React Native, dan TypeScript dengan Firebase sebagai backend. Aplikasi ini membantu pengguna mencatat transaksi keuangan, memantau arus kas, dan mengatur anggaran bulanan per jenis pengeluaran secara praktis dari perangkat mobile.",
       images: [
         { src: "/m1.jpeg", alt: "FM-Finance — tampilan beranda aplikasi" },
         { src: "/m2.jpeg", alt: "FM-Finance — ringkasan keuangan" },
@@ -192,11 +192,11 @@ export const projects: Project[] = [
       ],
       technologies: ["Expo", "React Native", "TypeScript", "Firebase"],
       features: [
-        "Pencatatan pemasukan dan pengeluaran harian",
+        "Pencatatan pemasukan dan pengeluaran",
         "Ringkasan saldo dan arus kas",
-        "Kategori transaksi yang dapat dikustomisasi",
+        "Anggaran bulanan per kategori pengeluaran",
         "Autentikasi pengguna dengan Firebase",
-        "Antarmuka mobile yang responsif dan mudah digunakan",
+        "UI mobile yang responsif dan mudah digunakan",
       ],
       download: {
         android: {

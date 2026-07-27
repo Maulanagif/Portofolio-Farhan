@@ -18,6 +18,7 @@ const ICON_PATHS: Record<string, string> = {
   "Visual Studio Code": "/skills/visual-studio-code.webp",
   Cursor: "/Logo_Cursor.png",
   Antigravity: "/Google-Antigravity-Icon-Full-Color.png",
+  Expo: "/expo.png",
   XAMPP: "/skills/xampp.png",
   "Microsoft Office": "/Logo_MicrosoftOffice.png",
   Wireshark: "/Logo_Wireshark.png",
