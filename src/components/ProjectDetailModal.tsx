@@ -219,47 +219,46 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                 <h3 className="mb-3 text-sm font-semibold text-slate-900">Unduh Aplikasi</h3>
                 <div className="space-y-4">
                   {detail.download?.android && (
-                    <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+                    <div className="rounded-xl border border-zinc-200 bg-white p-5 sm:p-6">
                       <p className="mb-3 text-xs font-medium uppercase tracking-wider text-zinc-500">
                         Android
                       </p>
-                      <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
-                        {detail.download.android.barcodeImage && (
-                          <figure className="shrink-0">
+                      <p className="text-sm leading-relaxed text-zinc-600">
+                        Unduh file APK FM-Finance melalui Google Drive, atau scan QR code berikut.
+                      </p>
+
+                      {detail.download.android.barcodeImage && (
+                        <figure className="mx-auto my-5 flex w-full max-w-[11rem] flex-col items-center">
+                          <div className="flex aspect-square w-full items-center justify-center rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                               src={encodeURI(detail.download.android.barcodeImage)}
                               alt="QR code unduh APK FM-Finance untuk Android"
-                              className="h-36 w-36 rounded-lg border border-zinc-200 bg-white object-contain p-2"
+                              className="h-full w-full object-contain"
                               loading="lazy"
                               draggable={false}
                             />
-                            <figcaption className="mt-2 text-center text-xs text-zinc-500">
-                              Scan untuk unduh APK
-                            </figcaption>
-                          </figure>
-                        )}
-                        <div className="flex flex-1 flex-col gap-2">
-                          <p className="text-sm leading-relaxed text-zinc-600">
-                            Unduh file APK FM-Finance melalui Google Drive, atau scan QR code di
-                            samping.
-                          </p>
-                          <a
-                            href={detail.download.android.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2.5 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100 sm:w-auto"
-                          >
-                            <Smartphone size={16} />
-                            {detail.download.android.label ?? "Unduh APK Android"}
-                          </a>
-                        </div>
-                      </div>
+                          </div>
+                          <figcaption className="mt-3 text-center text-xs text-zinc-500">
+                            Scan untuk unduh APK
+                          </figcaption>
+                        </figure>
+                      )}
+
+                      <a
+                        href={detail.download.android.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2.5 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
+                      >
+                        <Smartphone size={16} />
+                        {detail.download.android.label ?? "Unduh APK Android"}
+                      </a>
                     </div>
                   )}
 
                   {detail.download?.ios && (
-                    <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+                    <div className="rounded-xl border border-zinc-200 bg-white p-5 sm:p-6">
                       <p className="mb-3 text-xs font-medium uppercase tracking-wider text-zinc-500">
                         iOS
                       </p>
@@ -271,7 +270,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                         href={detail.download.ios.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2.5 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100 sm:w-auto"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2.5 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-100"
                       >
                         <Smartphone size={16} />
                         {detail.download.ios.label ?? "Buka di iOS"}
