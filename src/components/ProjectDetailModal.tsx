@@ -229,7 +229,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                               src={encodeURI(detail.download.android.barcodeImage)}
-                              alt="Barcode unduh APK FM-Finance untuk Android"
+                              alt="QR code unduh APK FM-Finance untuk Android"
                               className="h-36 w-36 rounded-lg border border-zinc-200 bg-white object-contain p-2"
                               loading="lazy"
                               draggable={false}
@@ -241,7 +241,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                         )}
                         <div className="flex flex-1 flex-col gap-2">
                           <p className="text-sm leading-relaxed text-zinc-600">
-                            Unduh file APK FM-Finance melalui Google Drive, atau scan barcode di
+                            Unduh file APK FM-Finance melalui Google Drive, atau scan QR code di
                             samping.
                           </p>
                           <a

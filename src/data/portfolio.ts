@@ -202,7 +202,7 @@ export const projects: Project[] = [
         android: {
           url: "https://drive.google.com/drive/folders/1dkPf-9poNucYEhcom0Q6syVw8k3WQhiJ?usp=drive_link",
           label: "Unduh APK Android",
-          barcodeImage: "/barcode.jpeg",
+          barcodeImage: "/qrcodefm.png",
         },
         ios: {
           url: "https://fm-finance-rho.vercel.app",
